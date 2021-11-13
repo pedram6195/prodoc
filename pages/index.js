@@ -15,6 +15,7 @@ const Home = () => {
       <main className={styles.main}>
         <h1>main heading for push...</h1>
         <h1>another change for header</h1>
+        <h1>third one to develop</h1>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
