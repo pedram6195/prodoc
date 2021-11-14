@@ -1,3 +1,392 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Thin;
+    font-style: normal;
+    font-weight: 100;
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-Thin.eot");
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-Thin.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */ url("/fonts/Anjoman/woff2/Anjoman-FaNum-Thin.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/Anjoman/woff/Anjoman-FaNum-Thin.woff") format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: ExtraLight;
+    font-style: normal;
+    font-weight: 200;
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-ExtraLight.eot");
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-ExtraLight.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */ url("/fonts/Anjoman/woff2/Anjoman-FaNum-ExtraLight.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/Anjoman/woff/Anjoman-FaNum-ExtraLight.woff") format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Light;
+    font-style: normal;
+    font-weight: 300;
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-Light.eot");
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-Light.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */ url("/fonts/Anjoman/woff2/Anjoman-FaNum-Light.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/Anjoman/woff/Anjoman-FaNum-Light.woff") format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Medium;
+    font-style: normal;
+    font-weight: 500;
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-Medium.eot");
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-Medium.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */ url("/fonts/Anjoman/woff2/Anjoman-FaNum-Medium.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/Anjoman/woff/Anjoman-FaNum-Medium.woff") format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: SemiBold;
+    font-style: normal;
+    font-weight: 600;
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-SemiBold.eot");
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-SemiBold.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */ url("/fonts/Anjoman/woff2/Anjoman-FaNum-SemiBold.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/Anjoman/woff/Anjoman-FaNum-SemiBold.woff") format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: ExtraBold;
+    font-style: normal;
+    font-weight: 750;
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-ExtraBold.eot");
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-ExtraBold.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */ url("/fonts/Anjoman/woff2/Anjoman-FaNum-ExtraBold.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/Anjoman/woff/Anjoman-FaNum-ExtraBold.woff") format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: UltraBold;
+    font-style: normal;
+    font-weight: 800;
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-UltraBold.eot");
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-UltraBold.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */ url("/fonts/Anjoman/woff2/Anjoman-FaNum-UltraBold.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/Anjoman/woff/Anjoman-FaNum-UltraBold.woff") format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Black;
+    font-style: normal;
+    font-weight: 850;
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-Black.eot");
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-Black.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */ url("/fonts/Anjoman/woff2/Anjoman-FaNum-Black.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/Anjoman/woff/Anjoman-FaNum-Black.woff") format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Heavy;
+    font-style: normal;
+    font-weight: 900;
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-Heavy.eot");
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-Heavy.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */ url("/fonts/Anjoman/woff2/Anjoman-FaNum-Heavy.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/Anjoman/woff/Anjoman-FaNum-Heavy.woff") format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: SuperHeavy;
+    font-style: normal;
+    font-weight: 1000;
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-SuperHeavy.eot");
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-SuperHeavy.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */ url("/fonts/Anjoman/woff2/Anjoman-FaNum-SuperHeavy.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/Anjoman/woff/Anjoman-FaNum-SuperHeavy.woff") format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Bold;
+    font-style: normal;
+    font-weight: bold;
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-Bold.eot");
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-Bold.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */ url("/fonts/Anjoman/woff2/Anjoman-FaNum-Bold.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/Anjoman/woff/Anjoman-FaNum-Bold.woff") format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Regular;
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-Regular.eot");
+    src: url("/fonts/Anjoman/eot/Anjoman-FaNum-Regular.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */ url("/fonts/Anjoman/woff2/Anjoman-FaNum-Regular.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/Anjoman/woff/Anjoman-FaNum-Regular.woff") format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: EnBlack;
+    font-style: normal;
+    font-weight: 850;
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-Black.eot");
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-Black.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/02- Woff2/Anjoman-Black.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/01- Woff/Anjoman-Black.woff")
+        format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: EnRegular;
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-Regular.eot");
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-Regular.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/02- Woff2/Anjoman-Regular.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/01- Woff/Anjoman-Regular.woff")
+        format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: EnBold;
+    font-style: normal;
+    font-weight: bold;
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-Bold.eot");
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-Bold.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/02- Woff2/Anjoman-Bold.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/01- Woff/Anjoman-Bold.woff")
+        format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: EnExtraBold;
+    font-style: normal;
+    font-weight: 750;
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-ExtraBold.eot");
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-ExtraBold.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/02- Woff2/Anjoman-ExtraBold.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/01- Woff/Anjoman-ExtraBold.woff")
+        format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: EnExtraLight;
+    font-style: normal;
+    font-weight: 200;
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-ExtraLight.eot");
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-ExtraLight.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/02- Woff2/Anjoman-ExtraLight.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/01- Woff/Anjoman-ExtraLight.woff")
+        format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: EnHeavy;
+    font-style: normal;
+    font-weight: 900;
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-Heavy.eot");
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-Heavy.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/02- Woff2/Anjoman-Heavy.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/01- Woff/Anjoman-Heavy.woff")
+        format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: EnLight;
+    font-style: normal;
+    font-weight: 300;
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-Light.eot");
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-Light.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/02- Woff2/Anjoman-Light.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/01- Woff/Anjoman-Light.woff")
+        format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: EnMedium;
+    font-style: normal;
+    font-weight: 500;
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-Medium.eot");
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-Medium.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/02- Woff2/Anjoman-Medium.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/01- Woff/Anjoman-Medium.woff")
+        format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: EnSemiBold;
+    font-style: normal;
+    font-weight: 600;
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-SemiBold.eot");
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-SemiBold.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/02- Woff2/Anjoman-SemiBold.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/01- Woff/Anjoman-SemiBold.woff")
+        format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: EnSuperHeavy;
+    font-style: normal;
+    font-weight: 1000;
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-SuperHeavy.eot");
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-SuperHeavy.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/02- Woff2/Anjoman-SuperHeavy.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/01- Woff/Anjoman-SuperHeavy.woff")
+        format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: EnThin;
+    font-style: normal;
+    font-weight: 100;
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-Thin.eot");
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-Thin.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/02- Woff2/Anjoman-Thin.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/01- Woff/Anjoman-Thin.woff")
+        format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+  @font-face {
+    font-family: EnUltraBold;
+    font-style: normal;
+    font-weight: 800;
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-UltraBold.eot");
+    src: url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/03- Eot/Anjoman-UltraBold.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-8 */
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/02- Woff2/Anjoman-UltraBold.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/
+        url("/fonts/AnjomanPro/01 - Anjoman Font Family/05- Webfonts/01- Woff/Anjoman-UltraBold.woff")
+        format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    font-display: swap;
+  }
+
+  img {
+    @apply flex;
+  }
+  video {
+    @apply flex object-fill;
+  }
+  textarea {
+    @apply resize-none;
+  }
+  input {
+    @apply outline-none;
+  }
+}
+
+@layer utilities {
+  @variants responsive {
+    .no-select {
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+/* ---  hide arrows in number inputs --- */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}

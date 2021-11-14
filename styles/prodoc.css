@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Prodoc';
+  src:
+    url('/Prodoc-v1.0/fonts/Prodoc.ttf?2wyy6c') format('truetype'),
+    url('/Prodoc-v1.0/fonts/Prodoc.woff?2wyy6c') format('woff'),
+    url('/Prodoc-v1.0/fonts/Prodoc.svg?2wyy6c#Prodoc') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="prodoc-"], [class*=" prodoc-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Prodoc' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.prodoc-attach:before {
+  content: "\e900";
+}
+.prodoc-chevron-down:before {
+  content: "\e901";
+}
+.prodoc-clone:before {
+  content: "\e902";
+}
+.prodoc-edit:before {
+  content: "\e903";
+}
+.prodoc-loading:before {
+  content: "\e904";
+}
+.prodoc-plus:before {
+  content: "\e905";
+}
+.prodoc-plus-circle:before {
+  content: "\e906";
+}
+.prodoc-plus-square:before {
+  content: "\e907";
+}
+.prodoc-square:before {
+  content: "\e908";
+}
+.prodoc-trash:before {
+  content: "\e909";
+}
+.prodoc-user:before {
+  content: "\e90a";
+}
+.prodoc-users:before {
+  content: "\e90b";
+}
