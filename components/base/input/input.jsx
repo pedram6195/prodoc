@@ -1,8 +1,8 @@
 import React from "react";
 
-const Input = ({ className, children, ...props }) => {
+const Input = ({ className, parentClassName, children, ...props }) => {
   return (
-    <div>
+    <div className={parentClassName}>
       <input className={`focus:outline-none ${className}`} {...props} />
       {children}
     </div>

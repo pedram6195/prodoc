@@ -390,3 +390,12 @@ input[type="number"] {
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+textarea {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

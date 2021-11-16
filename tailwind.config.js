@@ -37,22 +37,33 @@ module.exports = {
         EnThin: ["EnThin"],
         EnUltraBold: ["EnUltraBold"],
       },
+      fontSize: {
+        Ten: '0.625rem',
+        Fourteen: '0.875rem',
+        Eight: '0.5rem'
+      },
       colors: {
-        "greyish-brown": "#4a4a4a",
-        "dark-cream": "#f4f4f4",
+        "Greyish-brown": "#4a4a4a",
+        "Dark-cream": "#f4f4f4",
         Cream: "#fafafa",
-        "blue-500": "#273476",
-        "blue-400": "#6673b8",
-        "blue-300": "#acb1ca",
-        "blue-200": "#dcdfef",
-        "blue-100": "#f5f6fd",
-        "light-blue": "#009ccb",
-        "light-green": "#00c585",
+        "Blue-700": "#273476",
+        "Blue-600": "#6673b8",
+        "Blue-500": "#acb1ca",
+        "Blue-400": "#ccd0e7",
+        "Blue-300": "#dcdfef",
+        "Blue-200": "#e5e7f3",
+        "Blue-100": "#f5f6fd",
+        "Light-blue": "#009ccb",
+        "Light-green": "#00c585",
         Green: "#109621",
         Red: "#b00020",
         Orange: "#fc8b44",
-        "greyish-blue": "#ccd0e7",
       },
+      spacing: {
+        Eighteen: '1.125rem',
+        Fourteen: '0.875rem',
+        TwentyTwo: '1.375rem'
+      }
     },
   },
   variants: {

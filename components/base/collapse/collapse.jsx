@@ -7,7 +7,8 @@ const Collapse = ({
   collapsedHeight = 0,
   duration,
   className = "",
-  nested
+  nested,
+  ...props
 }) => {
   const ref = useRef();
   const durationRef = useRef();
@@ -48,6 +49,7 @@ const Collapse = ({
     <div
       className={`overflow-hidden ${nested ? "max-h-0" : "h-0"} ${className}`}
       ref={ref}
+      {...props}
     >
       {children}
     </div>

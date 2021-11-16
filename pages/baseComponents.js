@@ -1,6 +1,5 @@
 import React from "react";
 import withAuth from "../HOC/withAuth";
-import { TrashIcon, PlusCircleIcon, PlusIcon, PlusSquareIcon, ArrowDown, UserIcon, UsersIcon } from '../components/icons'
 
 const BaseComponents = () => {
     return (
