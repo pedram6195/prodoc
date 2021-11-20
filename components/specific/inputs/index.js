@@ -60,7 +60,7 @@ export const SearchInput = ({ className, ...props }) => {
   return (
     <Input
       parentClassName={`h-12 rounded-lg px-6 flex items-center border border-Blue-300 ${className}`}
-      className={`rounded-lg text-Blue-600 font-EnRegular text-Fourteen placeholder-Blue-600 w-full`}
+      className={`text-Blue-600 font-EnRegular text-Fourteen placeholder-Blue-600 w-full`}
       {...props}
     />
   );

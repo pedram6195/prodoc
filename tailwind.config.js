@@ -38,9 +38,9 @@ module.exports = {
         EnUltraBold: ["EnUltraBold"],
       },
       fontSize: {
-        Ten: '0.625rem',
-        Fourteen: '0.875rem',
-        Eight: '0.5rem'
+        Ten: "0.625rem",
+        Fourteen: "0.875rem",
+        Eight: "0.5rem",
       },
       colors: {
         "Greyish-brown": "#4a4a4a",
@@ -60,10 +60,23 @@ module.exports = {
         Orange: "#fc8b44",
       },
       spacing: {
-        Eighteen: '1.125rem',
-        Fourteen: '0.875rem',
-        TwentyTwo: '1.375rem'
-      }
+        Eighteen: "1.125rem",
+        Fourteen: "0.875rem",
+        TwentyTwo: "1.375rem",
+      },
+      keyframes: {
+        collapse: {
+          "0%": {
+            height: '0',
+          },
+          "100%": {
+            height: "100%",
+          },
+        },
+      },
+      animation: {
+        collapse: "collapse 1s linear",
+      },
     },
   },
   variants: {

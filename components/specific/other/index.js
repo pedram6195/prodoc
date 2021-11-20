@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { Children, useState } from "react";
 
 import Div from "../container";
 import Text from "../../base/text";
 import { CloneIcon, TrashIcon, ArrowDown, PlusIcon } from "../../icons";
 import Collapse from "../../base/collapse/collapse";
+
+import { limitText } from "../../../helpers";
 
 export const ApiFolderItem = ({
   method,
@@ -91,9 +93,149 @@ export const UrlInfoBox = ({ method, url, className, ...props }) => {
       >
         <Text className="text-Blue-700 text-xs font-EnRegular">{method}</Text>
       </Div>
-      <Text className='text-base text-Blue-700 font-EnRegular flex items-center'>
+      <Text className="text-base text-Blue-700 font-EnRegular flex items-center">
         {url}
       </Text>
     </Div>
   );
 };
+
+export const ParamViwer = ({
+  className,
+  param,
+  isRequired = false,
+  description = '',
+  children,
+  ...props
+}) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <Div className={`flex ${className}`} {...props}>
+      <Div className={`flex flex-col font-EnLight mr-16`}>
+        <Text className={`text-xs text-Blue-700`}>{param}</Text>
+        <Div className="relative mt-[2px]">
+          {isRequired && (
+            <Text className={`text-Ten absolute text-Red`}>Required</Text>
+          )}
+        </Div>
+      </Div>
+      <Div className="relative w-80">
+        <Collapse open={open} collapsedHeight={20} className="flex">
+          {description.length > 50 && !open && (
+            <Text
+              className="text-Blue-700 text-Eight font-EnRegular cursor-pointer absolute right-0 bottom-2 bg-white"
+              onClick={() => {
+                setOpen(!open);
+              }}
+            >
+              More
+            </Text>
+          )}
+          {description.length > 50 && open && (
+            <Text
+              className="text-Blue-700 text-Eight font-EnRegular cursor-pointer absolute right-0 bottom-1 bg-white"
+              onClick={() => {
+                setOpen(!open);
+              }}
+            >
+              Less
+            </Text>
+          )}
+          {description.length > 50 && !open && (
+            <Text className="text-xs text-Blue-700 font-EnRegular w-[90%]">
+              {limitText(description, 45)}
+            </Text>
+          )}
+          {description.length > 50 && open && (
+            <Text className="text-xs text-Blue-700 font-EnRegular w-[90%]">
+              {description}
+            </Text>
+          )}
+          {description.length < 50 && (
+            <Text className="text-xs text-Blue-700 font-EnRegular w-[90%]">
+              {description}
+            </Text>
+          )}
+        </Collapse>
+        <Div className="bg-Blue-300 h-[1px] w-full"></Div>
+      </Div>
+    </Div>
+  );
+};
+
+export const BodyViewer = ({
+  className,
+  body,
+  type,
+  isRequired = false,
+  description = "",
+  children,
+  ...props
+}) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <Div className={`flex ${className}`} {...props}>
+      <Div className={`flex flex-col font-EnLight mr-16`}>
+        <Text className={`text-xs text-Blue-700`}>{body}</Text>
+        <Div className="relative mt-[2px]">
+          {isRequired && (
+            <Text className={`text-Ten absolute text-Red`}>Required</Text>
+          )}
+        </Div>
+      </Div>
+      <Div className="relative w-80">
+        <Text className="font-EnExtraLight text-xs text-Blue-700 mb-3">
+          {type}
+        </Text>
+        <Collapse open={open} collapsedHeight={20} className="flex">
+          {description.length > 50 && !open && (
+            <Text
+              className="text-Blue-700 text-Eight font-EnRegular cursor-pointer absolute right-0 bottom-2 bg-white"
+              onClick={() => {
+                setOpen(!open);
+              }}
+            >
+              More
+            </Text>
+          )}
+          {description.length > 50 && open && (
+            <Text
+              className="text-Blue-700 text-Eight font-EnRegular cursor-pointer absolute right-0 bottom-1 bg-white"
+              onClick={() => {
+                setOpen(!open);
+              }}
+            >
+              Less
+            </Text>
+          )}
+          {description.length > 50 && !open && (
+            <Text className="text-xs text-Blue-700 font-EnRegular w-[90%]">
+              {limitText(description, 45)}
+            </Text>
+          )}
+          {description.length > 50 && open && (
+            <Text className="text-xs text-Blue-700 font-EnRegular w-[90%]">
+              {description}
+            </Text>
+          )}
+          {description.length < 50 && (
+            <Text className="text-xs text-Blue-700 font-EnRegular w-[90%]">
+              {description}
+            </Text>
+          )}
+        </Collapse>
+        <Div className="bg-Blue-300 h-[1px] w-full"></Div>
+      </Div>
+    </Div>
+  );
+};
+
+export const HeaderEditor = ({header, value, className, ...props}) => {
+  return (
+    <Div className={`flex flex-col ${className}`} >
+      <Div className={`flex justify-between`}></Div>
+    </Div>
+  )
+}

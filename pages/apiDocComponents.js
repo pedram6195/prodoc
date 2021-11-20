@@ -16,6 +16,8 @@ import {
   ApiFolderItem,
   ApiFolder,
   UrlInfoBox,
+  ParamViwer,
+  BodyViewer,
 } from "../components/specific/other";
 import Text from "../components/base/text";
 import {
@@ -25,7 +27,8 @@ import {
 } from "../components/specific/inputs";
 import OtpInput from "react-otp-input";
 import Select from "../components/specific/select";
-import { NonceProvider } from "react-select";
+import Checkbox from "../components/base/checkbox/checkbox";
+import SecondCheckbox from '../components/specific/checkbox'
 
 const ApiDocComponents = () => {
   const [otp, setOtp] = useState("");
@@ -144,7 +147,6 @@ const ApiDocComponents = () => {
         containerStyles={{ border: "none" }}
         controlStyles={{
           border: "1px solid #dcdfef",
-          borderRadius: "0.5rem 0.5rem 0 0",
           height: "3rem",
           paddingLeft: "1rem",
           paddingRight: "1.5rem",
@@ -163,13 +165,48 @@ const ApiDocComponents = () => {
           color: "#273476",
           fontSize: "0.75rem",
         }}
-        menuListSingle={{
-          // backgroundColor: isFocused && '#e5e7f3',
+        menuListSingleStyle={{
           ":hover": {
             backgroundColor: "#e5e7f3",
           },
         }}
+        dropDownStyles={{
+          color: "#6673b8",
+          fontSize: "0.5rem",
+        }}
         className="w-1/2"
+      />
+      <LineBreak />
+      <ParamViwer
+        className="mb-5"
+        param="param"
+        description="this is just a sample text this is just a sample text this is just a sample text this is just a sample text this is just a sample text this is just a sample text"
+        isRequired
+      />
+      <ParamViwer
+        param="param"
+        description="this is just a sample text with more characters in one line and it is very simple this is just a sample text with more characters in one line and it is very simple this is just a sample text with more characters in one line and it is very simple this is just a sample text with more characters in one line and it is very simple"
+        isRequired
+      />
+      <LineBreak />
+      <BodyViewer
+        type="type"
+        body="body"
+        description="this is a sample text this is a sample text this is a sample text this is a sample text this is a sample text this is a sample text"
+        isRequired
+        className="mb-4"
+      />
+      <BodyViewer
+        type="type"
+        body="body"
+        description="this is a sample text this is a sample text this is a sample text this is a sample text this is a sample text this is a sample text"
+        isRequired
+      />
+      <LineBreak />
+      <SecondCheckbox
+        label="Required"
+        labelClassName="font-EnMedium !text-sm text-Red"
+        className=""
       />
     </Div>
   );
