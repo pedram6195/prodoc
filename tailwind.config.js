@@ -64,10 +64,18 @@ module.exports = {
         Fourteen: "0.875rem",
         TwentyTwo: "1.375rem",
       },
+      zIndex: {
+        "-10": "-10",
+        60: "60",
+      },
+      boxShadow: {
+        Primary: "0 3px 6px 0 rgba(0, 0, 0, 0.27)",
+        "Blue-400": "0 0 8px 0 rgba(204, 208, 231, 0.7)",
+      },
       keyframes: {
         collapse: {
           "0%": {
-            height: '0',
+            height: "0",
           },
           "100%": {
             height: "100%",

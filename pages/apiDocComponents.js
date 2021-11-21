@@ -18,6 +18,7 @@ import {
   UrlInfoBox,
   ParamViwer,
   BodyViewer,
+  ApiDocName,
 } from "../components/specific/other";
 import Text from "../components/base/text";
 import {
@@ -27,8 +28,10 @@ import {
 } from "../components/specific/inputs";
 import OtpInput from "react-otp-input";
 import Select from "../components/specific/select";
-import Checkbox from "../components/base/checkbox/checkbox";
-import SecondCheckbox from '../components/specific/checkbox'
+import Checkbox from "../components/specific/checkbox";
+import { User } from "../components/specific/other";
+import { HeaderUser } from "../components/specific/layout";
+import { Tabs, Tab, TabContent } from "../components/base/tabs";
 
 const ApiDocComponents = () => {
   const [otp, setOtp] = useState("");
@@ -203,10 +206,87 @@ const ApiDocComponents = () => {
         isRequired
       />
       <LineBreak />
-      <SecondCheckbox
+      <Checkbox
         label="Required"
         labelClassName="font-EnMedium !text-sm text-Red"
         className=""
+      />
+      <LineBreak />
+      <User name="Danial Darabi" email="Drdanial97@gmail.com" />
+      <LineBreak />
+      <HeaderUser userName={"userName"} />
+      <LineBreak />
+
+      <Text className="text-2xl mb-4">Base Tab</Text>
+      <Tabs>
+        <Div className={`flex flex-row whitespace-nowrap flex-nowrap`}>
+          <Tab index={1}>first</Tab>
+          <Tab index={2}>second</Tab>
+          <Tab index={3}>third</Tab>
+        </Div>
+
+        <TabContent index={1}>
+          <Text>First Content</Text>
+        </TabContent>
+        <TabContent index={2}>
+          <Text>Second Content</Text>
+        </TabContent>
+        <TabContent index={3}>
+          <Text>Third Content</Text>
+        </TabContent>
+      </Tabs>
+      <LineBreak />
+      <Text className="text-2xl mb-4">api-doc tab</Text>
+      <Tabs className="flex flex-col">
+        <Div className="flex">
+          <Tab index={1} activeStyles="border-b-4 border-b-Blue-700">
+            <Text className="text-base text-Blue-700 font-EnMedium p-3">
+              Headers
+            </Text>
+          </Tab>
+          <Tab index={2} activeStyles="border-b-4 border-b-Blue-700">
+            <Text className="text-base text-Blue-700 font-EnMedium p-3">
+              Params
+            </Text>
+          </Tab>
+          <Tab index={3} activeStyles="border-b-4 border-b-Blue-700">
+            <Text className="text-base text-Blue-700 font-EnMedium p-3">
+              Body
+            </Text>
+          </Tab>
+          <Tab index={4} activeStyles="border-b-4 border-b-Blue-700">
+            <Text className="text-base text-Blue-700 font-EnMedium p-3">
+              Responses
+            </Text>
+          </Tab>
+        </Div>
+        <Div className="h-[4px] w-full bg-Blue-300 shadow-Primary relative bottom-1 -z-10"></Div>
+        <TabContent index={1}>Headers</TabContent>
+        <TabContent index={2}>Params</TabContent>
+        <TabContent index={3}>Body</TabContent>
+        <TabContent index={4}>Responses</TabContent>
+      </Tabs>
+      <LineBreak />
+      <ApiDocName
+        // apiImage="/images/user-circle.png"
+        apiName="api doc name"
+        userImages={[
+          "/images/user-circle.png",
+          "/images/user-circle.png",
+          "/images/user-circle.png",
+          "/images/user-circle.png",
+        ]}
+        userNames={[
+          "mohamad keshavarz",
+          "pedram afrasiabi",
+          "ehsan jafari",
+          "fateme shahbazi",
+          "danial darabi",
+          "ghazale javidnia",
+        ]}
+        userCount={10}
+        onUserClick={() => console.log("hey")}
+        time="17h"
       />
     </Div>
   );

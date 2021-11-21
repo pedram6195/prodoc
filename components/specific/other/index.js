@@ -1,11 +1,12 @@
-import React, { Children, useState } from "react";
+import React, { useState } from "react";
+import Image from "next/image";
 
 import Div from "../container";
 import Text from "../../base/text";
 import { CloneIcon, TrashIcon, ArrowDown, PlusIcon } from "../../icons";
 import Collapse from "../../base/collapse/collapse";
 
-import { limitText } from "../../../helpers";
+import { limitText, nameMaker, toTitleCase } from "../../../helpers";
 
 export const ApiFolderItem = ({
   method,
@@ -104,7 +105,7 @@ export const ParamViwer = ({
   className,
   param,
   isRequired = false,
-  description = '',
+  description = "",
   children,
   ...props
 }) => {
@@ -232,10 +233,161 @@ export const BodyViewer = ({
   );
 };
 
-export const HeaderEditor = ({header, value, className, ...props}) => {
+export const HeaderEditor = ({ header, value, className }) => {
   return (
-    <Div className={`flex flex-col ${className}`} >
+    <Div className={`flex flex-col ${className}`}>
       <Div className={`flex justify-between`}></Div>
     </Div>
-  )
-}
+  );
+};
+
+export const User = ({ className, avatar, name, email }) => {
+  return (
+    <Div className={`flex ${className}`}>
+      <Div
+        className={`relative w-12 h-12 border border-Blue-600 rounded-[50%] p-3 mr-2`}
+      >
+        <Image
+          alt="user avatar"
+          layout="responsive"
+          width={24}
+          height={24}
+          src={`${avatar || "/images/user-avatar.svg"}`}
+        />
+      </Div>
+      <Div className={`flex flex-col justify-between`}>
+        <Text className={`font-EnMedium text-base text-Blue-700`}>{name}</Text>
+        <Text className={`font-EnRegular text-xs text-Blue-600`}>{email}</Text>
+      </Div>
+    </Div>
+  );
+};
+
+export const ApiDocName = ({
+  apiName = "",
+  hasApiImage = false,
+  apiImage,
+  userImages = [],
+  userNames = [],
+  onUserClick = (f) => f,
+  userCount,
+  time,
+}) => {
+  return (
+    <Div className="flex flex-col">
+      <Div className="relative w-[15.5rem] h-[12rem] shadow-Blue-400 rounded-[1.25rem] flex justify-center items-center">
+        {apiImage ? (
+          <Div className='relative w-[15.5rem] h-[12rem]'>
+            <Image
+              alt="api image"
+              src={apiImage}
+              layout="responsive"
+              width={248}
+              height={193}
+              className="rounded-[1.25rem]"
+            />
+          </Div>
+        ) : (
+          <Text className="font-EnRegular text-[3.125rem] text-Blue-300 select-none">
+            {nameMaker(apiName)}
+          </Text>
+        )}
+      </Div>
+      <Text className="mt-3 mb-2 text-base text-Blue-700 font-EnRegular">
+        {toTitleCase(apiName)}
+      </Text>
+      <Div className="flex items-center justify-between w-[15rem]">
+        <Div className="flex items-center">
+          <UsersCircles
+            images={userImages}
+            userName={userNames}
+            onUserClick={onUserClick}
+          />
+          <Text className="font-EnRegular text-xs text-Blue-600 relative right-2">
+            + {userCount - 6}
+          </Text>
+        </Div>
+        <Text className="text-xs text-Blue-700">{time}</Text>
+      </Div>
+    </Div>
+  );
+};
+
+export const UsersCircles = ({
+  userName = [],
+  images = [],
+  onUserClick = (f) => f,
+}) => {
+  return (
+    <Div className="flex items-center">
+      {/* handle all users have images and images are more than six */}
+      {images.length >= 6 &&
+        images.slice(0, 6).map((image, index) => (
+          <Div
+            className={`relative w-7 h-7 rounded-[50%] border border-white cursor-pointer ${
+              index === 0
+                ? "z-60"
+                : index === 1
+                ? "right-[0.1875rem] z-50"
+                : index === 2
+                ? "right-[0.375rem] z-40"
+                : index === 3
+                ? "right-[0.5625rem] z-30"
+                : index === 4
+                ? "right-[0.75rem] z-20"
+                : index === 5
+                ? "right-[0.9375rem] z-10"
+                : ""
+            }`}
+            key={userName[index]}
+            onClick={onUserClick}
+          >
+            <Image
+              src={image}
+              alt={userName[index]}
+              title={userName[index]}
+              layout="responsive"
+              width={28}
+              height={28}
+              className="rounded-[50%]"
+            />
+          </Div>
+        ))}
+      {/* handle some users have images */}
+      {images.length < 6 &&
+        [1, 2, 3, 4, 5, 6].map((image, index) => (
+          <Div
+            className={`relative w-7 h-7 rounded-[50%] cursor-pointer ${
+              images[index] && "border border-white"
+            } ${
+              index === 0
+                ? "z-60"
+                : index === 1
+                ? "right-[0.1875rem] z-50"
+                : index === 2
+                ? "right-[0.375rem] z-40"
+                : index === 3
+                ? "right-[0.5625rem] z-30"
+                : index === 4
+                ? "right-[0.75rem] z-20"
+                : index === 5
+                ? "right-[0.9375rem] z-10"
+                : ""
+            }`}
+            key={index}
+            onClick={onUserClick}
+          >
+            <Image
+              src={images[index] || "/images/user-default-circle.svg"}
+              alt={userName[index]}
+              title={userName[index]}
+              layout="responsive"
+              width={28}
+              height={28}
+              className="rounded-[50%]"
+            />
+          </Div>
+        ))}
+    </Div>
+  );
+};

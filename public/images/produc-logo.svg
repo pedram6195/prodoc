@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="99" height="81" viewBox="0 0 99 81">
+    <defs>
+        <style>
+            .cls-1{fill:#00c485}
+        </style>
+    </defs>
+    <g id="Group_6242" data-name="Group 6242" transform="translate(-207 -156)">
+        <g id="ApiDac_Logo_2" data-name="ApiDac Logo 2" transform="translate(207 156)">
+            <path id="Rectangle_2152" data-name="Rectangle 2152" class="cls-1" transform="translate(52.749 17.918)" d="M0 0h6.498v5.397H0z"/>
+            <path id="Path_332" data-name="Path 332" class="cls-1" d="M608.247 201.981v16.626h-6.5v-25.968L592.274 179H529.51l20.261 29.148v-16.625h19.492v27.085h-6.5v-10.9h-6.5v9.782l9.477 13.634h62.77zm-12.994 5.731h-12.994v10.9h-6.5v-27.089h19.492z" transform="translate(-529.51 -179)"/>
+            <path id="Rectangle_2153" data-name="Rectangle 2153" class="cls-1" transform="translate(26.759 17.918)" d="M0 0h6.498v5.397H0z"/>
+            <text id="ProDoc" transform="translate(34 77)" style="fill:#273476;font-size:18px;font-family:Helvetica-Bold,Helvetica;font-weight:700"><tspan x="0" y="0">ProDoc</tspan></text>
+        </g>
+    </g>
+</svg>
