@@ -1,8 +1,8 @@
 import React from "react";
 
-const Div = ({ className, children, ...props }) => {
+const Div = ({ className, children, containerRef, ...props }) => {
   return (
-    <div className={className} {...props}>
+    <div className={className} ref={containerRef} {...props}>
       {children}
     </div>
   );

@@ -1,0 +1,8 @@
+<svg data-name="Group 4879" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <circle data-name="Ellipse 135" cx="32" cy="32" r="32" style="fill:#13c666"/>
+    <g data-name="Iconly/Light-Outline/Tick Square">
+        <g data-name="Tick Square">
+            <path data-name="Combined Shape" d="M10.2 36C4.1 36 0 31.722 0 25.352v-14.7C0 4.278 4.1 0 10.2 0h15.6C31.9 0 36 4.278 36 10.648v14.7C36 31.722 31.9 36 25.8 36zM2.7 10.648v14.7c0 4.829 2.942 7.949 7.5 7.949h15.6c4.557 0 7.5-3.12 7.5-7.949v-14.7c0-4.828-2.944-7.948-7.5-7.948H10.2c-4.557 0-7.5 3.121-7.5 7.948zm12.21 12.578-4.274-4.272a1.349 1.349 0 0 1 1.908-1.908l3.319 3.316 7.588-7.587a1.349 1.349 0 0 1 1.908 1.907l-8.542 8.544a1.349 1.349 0 0 1-1.908 0z" style="fill:#fff" transform="translate(14 14)"/>
+        </g>
+    </g>
+</svg>

@@ -30,7 +30,7 @@ import OtpInput from "react-otp-input";
 import Select from "../components/specific/select";
 import Checkbox from "../components/specific/checkbox";
 import { User } from "../components/specific/other";
-import { HeaderUser } from "../components/specific/layout";
+import { HeaderUser, HeaderLanding } from "../components/specific/layout";
 import { Tabs, Tab, TabContent } from "../components/base/tabs";
 
 const ApiDocComponents = () => {
@@ -183,7 +183,7 @@ const ApiDocComponents = () => {
       <ParamViwer
         className="mb-5"
         param="param"
-        description="this is just a sample text this is just a sample text this is just a sample text this is just a sample text this is just a sample text this is just a sample text"
+        description="this is just a sample text"
         isRequired
       />
       <ParamViwer
@@ -212,7 +212,11 @@ const ApiDocComponents = () => {
         className=""
       />
       <LineBreak />
-      <User name="Danial Darabi" email="Drdanial97@gmail.com" />
+      <User
+        avatar="/images/user-circle.png"
+        name="Danial Darabi"
+        email="Drdanial97@gmail.com"
+      />
       <LineBreak />
       <HeaderUser userName={"userName"} />
       <LineBreak />
@@ -274,7 +278,6 @@ const ApiDocComponents = () => {
           "/images/user-circle.png",
           "/images/user-circle.png",
           "/images/user-circle.png",
-          "/images/user-circle.png",
         ]}
         userNames={[
           "mohamad keshavarz",
@@ -284,10 +287,12 @@ const ApiDocComponents = () => {
           "danial darabi",
           "ghazale javidnia",
         ]}
-        userCount={10}
+        userCount={31}
         onUserClick={() => console.log("hey")}
         time="17h"
       />
+      <LineBreak />
+      <HeaderLanding />
     </Div>
   );
 };

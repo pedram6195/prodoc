@@ -355,7 +355,39 @@
 }
 
 @layer utilities {
+  /* slightly transparent fallback */
+  .custom-backdrop-blur {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+  .custom-backdrop-blur-nav {
+    background-color: rgba(0, 0, 0, 0.16);
+    backdrop-filter: blur(4.2px);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
+  }
+  /* if backdrop support: very transparent and blurred */
+  @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .custom-backdrop-blur {
+      background-color: rgba(255, 255, 255, 0.5);
+      -webkit-backdrop-filter: blur(50px);
+      backdrop-filter: blur(50px);
+    }
+    .custom-backdrop-blur-nav {
+      background-color: rgba(255, 255, 255, 0.5);
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+    }
+  }
+
   @variants responsive {
+    .flex-order-1 {
+      order: 1;
+    }
+    .flex-order-2 {
+      order: 2;
+    }
+    .flex-order-3 {
+      order: 3;
+    }
     .no-select {
       -webkit-tap-highlight-color: transparent;
       -webkit-touch-callout: none;
@@ -374,6 +406,10 @@
     }
   }
 }
+
+/* html {
+  scroll-behavior: smooth;
+} */
 
 /* ---  hide arrows in number inputs --- */
 

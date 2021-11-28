@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g data-name="Group 6240">
+        <path data-name="Rectangle 2414" style="fill:none" d="M0 0h16v16H0z"/>
+        <g data-name="Tick Square">
+            <path data-name="Combined Shape" d="M5.154 10.222a1.236 1.236 0 0 1-.875-.36L.363 5.978a1.219 1.219 0 0 1 0-1.735 1.243 1.243 0 0 1 1.749 0l3.042 3.015L12.111.36a1.243 1.243 0 0 1 1.749 0 1.219 1.219 0 0 1 0 1.735L6.029 9.862a1.233 1.233 0 0 1-.875.36" transform="translate(.973 2.825)" style="fill:#273476"/>
+        </g>
+    </g>
+</svg>

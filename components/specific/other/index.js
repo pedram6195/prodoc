@@ -77,7 +77,6 @@ export const ApiFolder = ({
           />
         </Div>
       </Div>
-
       {children}
     </Collapse>
   );
@@ -245,7 +244,9 @@ export const User = ({ className, avatar, name, email }) => {
   return (
     <Div className={`flex ${className}`}>
       <Div
-        className={`relative w-12 h-12 border border-Blue-600 rounded-[50%] p-3 mr-2`}
+        className={`relative w-12 h-12 border border-Blue-600 rounded-[50%] mr-2 ${
+          !avatar && "p-3"
+        }`}
       >
         <Image
           alt="user avatar"
@@ -253,6 +254,7 @@ export const User = ({ className, avatar, name, email }) => {
           width={24}
           height={24}
           src={`${avatar || "/images/user-avatar.svg"}`}
+          className="rounded-[50%]"
         />
       </Div>
       <Div className={`flex flex-col justify-between`}>
@@ -265,7 +267,6 @@ export const User = ({ className, avatar, name, email }) => {
 
 export const ApiDocName = ({
   apiName = "",
-  hasApiImage = false,
   apiImage,
   userImages = [],
   userNames = [],
@@ -277,7 +278,7 @@ export const ApiDocName = ({
     <Div className="flex flex-col">
       <Div className="relative w-[15.5rem] h-[12rem] shadow-Blue-400 rounded-[1.25rem] flex justify-center items-center">
         {apiImage ? (
-          <Div className='relative w-[15.5rem] h-[12rem]'>
+          <Div className="relative w-[15.5rem] h-[12rem]">
             <Image
               alt="api image"
               src={apiImage}
@@ -302,10 +303,13 @@ export const ApiDocName = ({
             images={userImages}
             userName={userNames}
             onUserClick={onUserClick}
+            userCount={userCount}
           />
-          <Text className="font-EnRegular text-xs text-Blue-600 relative right-2">
-            + {userCount - 6}
-          </Text>
+          {userCount > 6 && (
+            <Text className="font-EnRegular text-xs text-Blue-600 relative right-2">
+              + {userCount - 6}
+            </Text>
+          )}
         </Div>
         <Text className="text-xs text-Blue-700">{time}</Text>
       </Div>
@@ -316,15 +320,18 @@ export const ApiDocName = ({
 export const UsersCircles = ({
   userName = [],
   images = [],
+  userCount,
   onUserClick = (f) => f,
 }) => {
   return (
     <Div className="flex items-center">
       {/* handle all users have images and images are more than six */}
-      {images.length >= 6 &&
-        images.slice(0, 6).map((image, index) => (
+      {userCount >= 6 &&
+        [...Array(6)].map((image, index) => (
           <Div
-            className={`relative w-7 h-7 rounded-[50%] border border-white cursor-pointer ${
+            className={`relative w-7 h-7 rounded-[50%] cursor-pointer ${
+              images[index] && "border border-white"
+            } ${
               index === 0
                 ? "z-60"
                 : index === 1
@@ -339,11 +346,11 @@ export const UsersCircles = ({
                 ? "right-[0.9375rem] z-10"
                 : ""
             }`}
-            key={userName[index]}
+            key={index}
             onClick={onUserClick}
           >
             <Image
-              src={image}
+              src={images[index] || "/images/user-default-circle.svg"}
               alt={userName[index]}
               title={userName[index]}
               layout="responsive"
@@ -354,8 +361,8 @@ export const UsersCircles = ({
           </Div>
         ))}
       {/* handle some users have images */}
-      {images.length < 6 &&
-        [1, 2, 3, 4, 5, 6].map((image, index) => (
+      {userCount < 6 &&
+        [...Array(userCount)].map((image, index) => (
           <Div
             className={`relative w-7 h-7 rounded-[50%] cursor-pointer ${
               images[index] && "border border-white"
@@ -391,3 +398,4 @@ export const UsersCircles = ({
     </Div>
   );
 };
+

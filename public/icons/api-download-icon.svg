@@ -1,0 +1,15 @@
+<svg id="Group_4875" data-name="Group 4875" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-width:2.5px}
+        </style>
+    </defs>
+    <path id="Path_363" data-name="Path 363" d="M32 0A32 32 0 1 1 0 32 32 32 0 0 1 32 0z" style="fill:#13c666"/>
+    <g id="Iconly_Light_Download" data-name="Iconly/Light/Download" transform="translate(14 14)">
+        <g id="Downlaod">
+            <path id="Stroke_1" data-name="Stroke 1" class="cls-2" d="M25.533 0H0" transform="rotate(90 9 9)"/>
+            <path id="Stroke_3" data-name="Stroke 3" class="cls-2" d="m0 0 6.209 5.674L0 11.349" transform="rotate(90 2.175 21.5)"/>
+            <path id="Stroke_4" data-name="Stroke 4" class="cls-2" d="M0 8.984V7.169C0 3.209 3.5 0 7.814 0h10.357c4.3 0 7.793 3.2 7.793 7.151v21.678c0 3.96-3.5 7.171-7.814 7.171H7.791C3.488 36 0 32.8 0 28.849v-1.833" transform="rotate(90 12.982 23.018)"/>
+        </g>
+    </g>
+</svg>

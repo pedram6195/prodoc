@@ -30,7 +30,7 @@ export const Tab = ({
 
   return (
     <Div
-      className={`cursor-pointer flex whitespace-nowrap mr-4 ${
+      className={`cursor-pointer flex whitespace-nowrap ${
         active === index && activeStyles
       } ${className}`}
       onClick={() => {

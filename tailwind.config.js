@@ -6,9 +6,11 @@ module.exports = {
   darkMode: false,
   theme: {
     screens: {
-      xxs: "280px",
-      xs: "360px",
+      iphone5: { min: "300px", max: "374px" },
+      galaxyS5: { min: "360px", max: "374px" },
+      "custom-h-full": { raw: "(min-height: 700px)" },
       ...screens,
+      "3xl": "1920px",
     },
     extend: {
       fontFamily: {
@@ -41,6 +43,7 @@ module.exports = {
         Ten: "0.625rem",
         Fourteen: "0.875rem",
         Eight: "0.5rem",
+        Twenty: "1.25rem",
       },
       colors: {
         "Greyish-brown": "#4a4a4a",
@@ -71,6 +74,10 @@ module.exports = {
       boxShadow: {
         Primary: "0 3px 6px 0 rgba(0, 0, 0, 0.27)",
         "Blue-400": "0 0 8px 0 rgba(204, 208, 231, 0.7)",
+        "landing-first": "-16px 3px 6px 0 rgba(26, 36, 63, 0.1)",
+        "landing-second": "16px 3px 6px 0 rgba(0, 0, 0, 0.1)",
+        pricing: "0 3px 6px 0 rgba(39, 52, 118, 0.48)",
+        navigation: "0 3px 6px 0 rgba(0, 0, 0, 0.1)",
       },
       keyframes: {
         collapse: {
@@ -84,6 +91,11 @@ module.exports = {
       },
       animation: {
         collapse: "collapse 1s linear",
+      },
+      backgroundImage: {
+        hero: "url('/images/landing-hero.png')",
+        features: "url('/images/features-background.png')",
+        plans: "url('/images/plans-background.png')",
       },
     },
   },

@@ -1,0 +1,14 @@
+<svg data-name="Group 6111" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <g data-name="Group 5992">
+        <g data-name="Path 2752" style="fill:none">
+            <path d="M14 0A14 14 0 1 1 0 14 14 14 0 0 1 14 0z" style="stroke:none" transform="translate(6 6)"/>
+            <path d="M14 1a12.915 12.915 0 0 0-9.192 3.808A12.915 12.915 0 0 0 1 14c0 3.472 1.352 6.737 3.808 9.192A12.915 12.915 0 0 0 14 27c3.472 0 6.737-1.352 9.192-3.808A12.915 12.915 0 0 0 27 14c0-3.472-1.352-6.737-3.808-9.192A12.915 12.915 0 0 0 14 1m0-1c7.732 0 14 6.268 14 14s-6.268 14-14 14S0 21.732 0 14 6.268 0 14 0z" style="fill:#fff;stroke:none" transform="translate(6 6)"/>
+        </g>
+        <g data-name="email (2)">
+            <g data-name="Group 38">
+                <path data-name="Path 22" d="M12.77 61H1.23A1.252 1.252 0 0 0 0 62.269v8.462A1.252 1.252 0 0 0 1.23 72h11.54A1.252 1.252 0 0 0 14 70.731v-8.462A1.252 1.252 0 0 0 12.77 61zm-.17.846L7.026 67.6 1.4 61.846zM.82 70.556V62.44l3.951 4.04zm.58.6 3.953-4.078 1.385 1.417a.4.4 0 0 0 .579 0L8.668 67.1l3.932 4.054zm11.779-.6L9.248 66.5l3.932-4.056z" transform="translate(13 -46)" style="fill:#fff"/>
+            </g>
+        </g>
+    </g>
+    <path data-name="Rectangle 2409" style="fill:none" d="M0 0h40v40H0z"/>
+</svg>
