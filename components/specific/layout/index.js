@@ -246,9 +246,9 @@ export const HeaderLanding = () => {
 
 export const FooterLanding = () => {
   return (
-    <Div className="bg-[#f0f1f4]">
+    <Div className="bg-[#f0f1f4] lg:bg-[#1b2541]">
       <Div
-        className={`flex justify-between items-center px-4 h-10 lg:px-[7.17%] w-[90%] mx-[1.125rem] lg:h-[6.25rem] bg-[#1b2541]`}
+        className={`flex justify-between items-center px-4 h-10 lg:px-[7.17%] w-[90%] mx-[1.125rem] lg:w-full lg:mx-0 lg:h-[6.25rem] bg-[#1b2541]`}
       >
         <Div className="flex">
           <Div className="flex items-center cursor-pointer">

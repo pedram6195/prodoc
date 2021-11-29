@@ -671,13 +671,13 @@ const FAQ = () => {
   const [open5, setOpen5] = useState(false);
 
   return (
-    <Div className="bg-[#f0f1f4] pt-16 pb-14 lg:pt-[10rem]" id='faq'>
+    <Div className="bg-[#f0f1f4] pt-16 pb-14 lg:pt-[10rem]" id="faq">
       <Text className="font-Bold mx-auto w-[6.125rem] z-10 text-Blue-700 text-center text-base relative lg:text-4xl lg:w-[14.375rem] lg:after:h-8 lg:after:top-4 after:bg-center after:absolute after:top-2 after:right-0 after:bg-[#00c485] after:w-full after:h-4 after:-z-10">
         سوالات متداول
       </Text>
 
       <Div
-        className="pr-5 mt-8 flex items-center lg:mt-[10rem] lg:pr-14"
+        className="pr-5 mt-8 flex items-center cursor-pointer lg:mt-[10rem] lg:pr-14"
         onClick={() => {
           setOpen(!open);
         }}
@@ -714,7 +714,7 @@ const FAQ = () => {
       </Collapse>
 
       <Div
-        className="pr-5 flex items-center lg:mt-[3rem] lg:pr-14"
+        className="pr-5 flex items-center cursor-pointer lg:mt-[3rem] lg:pr-14"
         onClick={() => {
           setOpen2(!open2);
         }}
@@ -751,7 +751,7 @@ const FAQ = () => {
       </Collapse>
 
       <Div
-        className="pr-5 flex items-center lg:mt-[3rem] lg:pr-14"
+        className="pr-5 flex items-center cursor-pointer lg:mt-[3rem] lg:pr-14"
         onClick={() => {
           setOpen3(!open3);
         }}
@@ -793,7 +793,7 @@ const FAQ = () => {
           setOpen4(!open4);
         }}
       >
-        <Text className="text-xs text-Blue-700 font-Bold lg:text-[1.65rem]">
+        <Text className="text-xs text-Blue-700 font-Bold cursor-pointer lg:text-[1.65rem]">
           ۴. آیا وبینارهایی که برگزار شده‌اند را می‌توان رزرو کرد؟{" "}
         </Text>
         <Div className={`relative w-6 mr-1 lg:mr-6 lg:w-[2.25rem]`}>
@@ -825,7 +825,7 @@ const FAQ = () => {
       </Collapse>
 
       <Div
-        className="pr-5 flex items-center lg:mt-[3rem] lg:pr-14"
+        className="pr-5 flex items-center cursor-pointer lg:mt-[3rem] lg:pr-14"
         onClick={() => {
           setOpen5(!open5);
         }}
