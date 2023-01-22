@@ -1,4 +1,1 @@
-module.exports = {
-  reactStrictMode: true,
-  swcMinify: false,
-};
+module.exports = {}
